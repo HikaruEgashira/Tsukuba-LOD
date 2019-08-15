@@ -1,0 +1,94 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix ic: <https://imi.go.jp/ns/core/rdf#>. # 共通語彙基盤
+@prefix cc: <http://creativecommons.org/ns#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+<>
+      a dcat:Dataset ;
+      dcat:distribution  <https://github.com/HikaruEgashira/Tsukuba-LOD/module.ttl> ;
+      dcterms:title  "筑波大学学年暦"@ja ;
+      dcterms:publisher [
+            foaf:name  "江頭　輝"@ja, "Hikaru Egashira"@en ;
+            foaf:homepage  <https://github.com/HikaruEgashira/Tsukuba-LOD/>
+      ] ;
+      dcterms:issued  "2019-08-15"^^xsd:date ;
+      owl:versionInfo  "1.0" ;
+      dcterms:description  "モジュールの説明"@ja ;
+      dcterms:language  <http://id.loc.gov/vocabulary/iso639-1/ja> ;
+      cc:attributionName  "江頭　輝"@ja, "Hikaru Egashira"@en ;
+      cc:attributionURL  <https://github.com/HikaruEgashira/Tsukuba-LOD/> ;
+      cc:license  <https://creativecommons.org/licenses/by/4.0/deed.ja> .
+
+# データ
+:001  a  ic:イベントスケジュール型 ;
+       rdfs:label "春A"@ja ;
+       rdfs:label "SpringA"@en ;
+       ic:種別 "春A"@ja ;
+       ic:開催日 "2019-04-11"^^xsd:date ;
+       ic:終了日 "2019-05-23"^^xsd:date .
+
+:002  a  ic:イベントスケジュール型 ;
+       rdfs:label "春B"@ja ;
+       rdfs:label "SpringB"@en ;
+       ic:種別 "春B"@ja ;
+       ic:開催日 "2019-05-24"^^xsd:date ;
+       ic:終了日 "2019-06-27"^^xsd:date .
+
+:003  a  ic:イベントスケジュール型 ;
+       rdfs:label "春C"@ja ;
+       rdfs:label "SpringC"@en ;
+       ic:種別 "春C"@ja ;
+       ic:開催日 "2019-07-05"^^xsd:date ;
+       ic:終了日 "2019-08-09"^^xsd:date .
+
+:004  a  ic:イベントスケジュール型 ;
+       rdfs:label "秋A"@ja ;
+       rdfs:label "FallA"@en ;
+       ic:種別 "秋A"@ja ;
+       ic:開催日 "2019-10-01"^^xsd:date ;
+       ic:終了日 "2019-11-08"^^xsd:date .
+
+:005  a  ic:イベントスケジュール型 ;
+       rdfs:label "秋B"@ja ;
+       rdfs:label "FallB"@en ;
+       ic:種別 "秋B"@ja ;
+       ic:開催日 "2019-11-12"^^xsd:date ;
+       ic:終了日 "2019-12-19"^^xsd:date .
+
+:006  a  ic:イベントスケジュール型 ;
+       rdfs:label "秋C"@ja ;
+       rdfs:label "FallC"@en ;
+       ic:種別 "秋C"@ja ;
+       ic:開催日 "2019-01-06"^^xsd:date ;
+       ic:終了日 "2019-02-06"^^xsd:date .
+
+:007  a  ic:イベントスケジュール型 ;
+       rdfs:label "夏季休業中"@ja ;
+       rdfs:label "SummerVacation"@en ;
+       ic:種別 "夏季休業中"@ja ;
+       ic:開催日 "2019-08-10"^^xsd:date ;
+       ic:終了日 "2019-09-30"^^xsd:date .
+
+:008  a  ic:イベントスケジュール型 ;
+       rdfs:label "春季休業中"@ja ;
+       rdfs:label "SpringVacation"@en ;
+       ic:種別 "春季休業中"@ja ;
+       ic:開催日 "2020-02-15"^^xsd:date ;
+       ic:終了日 "2020-03-31"^^xsd:date .
+
+:009  a  ic:イベントスケジュール型 ;
+       rdfs:label "通年"@ja ;
+       rdfs:label "Annual"@en ;
+       ic:種別 "通年"@ja ;
+       ic:開催日 "2019-04-01"^^xsd:date ;
+       ic:終了日 "2020-03-31"^^xsd:date .
+
+:010  a  ic:イベントスケジュール型 ;
+       rdfs:label "不明"@ja ;
+       rdfs:label "Unknown"@en ;
+       ic:種別 "不明"@ja .
