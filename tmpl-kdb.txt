@@ -1,0 +1,25 @@
+##baseIRI=https://lod.egahika.ml/kdb#
+##ID=AUTO
+##cc:attributionName=パブリックドメイン
+##cc:license=http://creativecommons.org/publicdomain/zero/1.0/deed.ja
+@prefix bp: <https://lod.egahika.ml/kdb/property/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix ic: <http://imi.go.jp/ns/core/rdf#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+##mapping-rules-start
+ID  ic:ID型 [[ic:ID型]] ;
+ ic:名称 [[ic:名称@ja]]@ja ;
+ rdfs:label [[ic:名称@ja]]@ja ;
+ ic:名称 [[ic:名称@en]]@en ;
+ rdfs:label [[ic:名称@en]]@en ;
+ ic:メタデータ [[ic:メタデータ]] ;
+ ic:開催期日 [[ic:開催期日]] ;
+ ic:施設関連型 [[ic:施設関連型]] ;
+ ic:構成員型 [[ic:構成員型]] ;
+ ic:説明 [[ic:説明]] ;
+ ic:記述 [[ic:記述]] .
+##mapping-rules-end
