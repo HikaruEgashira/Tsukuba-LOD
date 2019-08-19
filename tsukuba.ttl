@@ -9,9 +9,8 @@
 
 <>
       a dcat:Dataset ;
-            foaf:name  "江頭　輝"@ja, "Hikaru Egashira"@en ;
-            foaf:homepage  <https://github.com/HikaruEgashira/Tsukuba-LOD/>
-      ] ;
+      foaf:name  "江頭　輝"@ja, "Hikaru Egashira"@en ;
+      foaf:homepage  <https://github.com/HikaruEgashira/Tsukuba-LOD/> ;
       owl:versionInfo  "1.0" ;
       cc:attributionName  "江頭　輝"@ja, "Hikaru Egashira"@en ;
       cc:attributionURL  <https://github.com/HikaruEgashira/Tsukuba-LOD/> ;
