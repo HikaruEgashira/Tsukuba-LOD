@@ -6,11 +6,16 @@
 @prefix cc: <http://creativecommons.org/ns#>.
 @prefix dcat: <http://www.w3.org/ns/dcat#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix bp: <https://github.com/HikaruEgashira/Tsukuba-LOD/> .
 
 <>
       a dcat:Dataset ;
-      foaf:name  "江頭　輝"@ja, "Hikaru Egashira"@en ;
-      foaf:homepage  <https://github.com/HikaruEgashira/Tsukuba-LOD/> ;
+      dcat:distribution  <https://***.ttl> ;
+      dcterms:title  "共通語彙基盤　筑波大学データセット"@ja ;
+      dcterms:publisher [
+            foaf:name  "江頭　輝"@ja, "HikaruEgashira"@en ;
+            foaf:homepage  <https://github.com/HikaruEgashira/>
+      ] ;
       owl:versionInfo  "1.0" ;
       cc:attributionName  "江頭　輝"@ja, "Hikaru Egashira"@en ;
       cc:attributionURL  <https://github.com/HikaruEgashira/Tsukuba-LOD/> ;
@@ -18,107 +23,107 @@
 
 # モジュール
 
-:001  a  ic:イベントスケジュール型 ;
+:春A  a  ic:イベントスケジュール型 ;
        rdfs:label "春A"@ja ;
        rdfs:label "SpringA"@en ;
        ic:種別 "モジュール"@ja ;
        ic:終了日 "2019-05-23"^^xsd:date .
 
-:002  a  ic:イベントスケジュール型 ;
+:春B  a  ic:イベントスケジュール型 ;
        rdfs:label "春B"@ja ;
        rdfs:label "SpringB"@en ;
        ic:種別 "モジュール"@ja ;
        ic:開催日 "2019-05-24"^^xsd:date ;
        ic:終了日 "2019-06-27"^^xsd:date .
 
-:003  a  ic:イベントスケジュール型 ;
+:春C  a  ic:イベントスケジュール型 ;
        rdfs:label "春C"@ja ;
        rdfs:label "SpringC"@en ;
        ic:種別 "モジュール"@ja ;
        ic:開催日 "2019-07-05"^^xsd:date ;
        ic:終了日 "2019-08-09"^^xsd:date .
 
-:004  a  ic:イベントスケジュール型 ;
+:秋A  a  ic:イベントスケジュール型 ;
        rdfs:label "秋A"@ja ;
        rdfs:label "FallA"@en ;
        ic:種別 "モジュール"@ja ;
        ic:開催日 "2019-10-01"^^xsd:date ;
        ic:終了日 "2019-11-08"^^xsd:date .
 
-:005  a  ic:イベントスケジュール型 ;
+:秋B  a  ic:イベントスケジュール型 ;
        rdfs:label "秋B"@ja ;
        rdfs:label "FallB"@en ;
        ic:種別 "モジュール"@ja ;
        ic:開催日 "2019-11-12"^^xsd:date ;
        ic:終了日 "2019-12-19"^^xsd:date .
 
-:006  a  ic:イベントスケジュール型 ;
+:秋C  a  ic:イベントスケジュール型 ;
        rdfs:label "秋C"@ja ;
        rdfs:label "FallC"@en ;
        ic:種別 "モジュール"@ja ;
        ic:開催日 "2019-01-06"^^xsd:date ;
        ic:終了日 "2019-02-06"^^xsd:date .
 
-:007  a  ic:イベントスケジュール型 ;
+:夏季休業中  a  ic:イベントスケジュール型 ;
        rdfs:label "夏季休業中"@ja ;
        rdfs:label "SummerVacation"@en ;
        ic:種別 "モジュール"@ja ;
        ic:開催日 "2019-08-10"^^xsd:date ;
        ic:終了日 "2019-09-30"^^xsd:date .
 
-:008  a  ic:イベントスケジュール型 ;
+:春季休業中  a  ic:イベントスケジュール型 ;
        rdfs:label "春季休業中"@ja ;
        rdfs:label "SpringVacation"@en ;
        ic:種別 "モジュール"@ja ;
        ic:開催日 "2020-02-15"^^xsd:date ;
        ic:終了日 "2020-03-31"^^xsd:date .
 
-:009  a  ic:イベントスケジュール型 ;
+:通年  a  ic:イベントスケジュール型 ;
        rdfs:label "通年"@ja ;
        rdfs:label "Annual"@en ;
        ic:種別 "モジュール"@ja ;
        ic:開催日 "2019-04-01"^^xsd:date ;
        ic:終了日 "2020-03-31"^^xsd:date .
 
-:010  a  ic:イベントスケジュール型 ;
+:不明  a  ic:イベントスケジュール型 ;
        rdfs:label "不明"@ja ;
        rdfs:label "Unknown"@en ;
        ic:種別 "モジュール"@ja .
 
 # 授業時間
 
-:011  a  ic:イベントスケジュール型 ;
-       rdfs:label "1"@en ;
-       ic:種別 "時限"@ja ;
-       ic:ic:開始時間 "08:40:00+09:00"^^xsd:time ;
-       ic:終了時間 "09:55:00+09:00"^^xsd:time .
+:1限  a  ic:イベントスケジュール型 ;
+       rdfs:label "1限" ;
+       ic:イベントスケジュール型_種別 "時限"@ja ;
+       ic:イベントスケジュール型_開始時間 "08:40:00+09:00"^^xsd:time ;
+       ic:イベントスケジュール型_終了時間 "09:55:00+09:00"^^xsd:time .
 
-:012  a  ic:イベントスケジュール型 ;
-       rdfs:label "2"@en ;
-       ic:種別 "時限"@ja ;
-       ic:ic:開始時間 "10:10:00+09:00"^^xsd:time ;
-       ic:終了時間 "11:25:00+09:00"^^xsd:time .
+:2限  a  ic:イベントスケジュール型 ;
+       rdfs:label "2限" ;
+       ic:イベントスケジュール型_種別 "時限"@ja ;
+       ic:イベントスケジュール型_開始時間 "10:10:00+09:00"^^xsd:time ;
+       ic:イベントスケジュール型_終了時間 "11:25:00+09:00"^^xsd:time .
 
-:013  a  ic:イベントスケジュール型 ;
-       rdfs:label "3"@en ;
-       ic:種別 "時限"@ja ;
-       ic:ic:開始時間 "12:15:00+09:00"^^xsd:time ;
-       ic:終了時間 "13:30:00+09:00"^^xsd:time .
+:3限  a  ic:イベントスケジュール型 ;
+       rdfs:label "3限" ;
+       ic:イベントスケジュール型_種別 "時限"@ja ;
+       ic:イベントスケジュール型_開始時間 "12:15:00+09:00"^^xsd:time ;
+       ic:イベントスケジュール型_終了時間 "13:30:00+09:00"^^xsd:time .
 
-:014  a  ic:イベントスケジュール型 ;
-       rdfs:label "4"@en ;
-       ic:種別 "時限"@ja ;
-       ic:ic:開始時間 "13:45:00+09:00"^^xsd:time ;
-       ic:終了時間 "15:00:00+09:00"^^xsd:time .
+:4限  a  ic:イベントスケジュール型 ;
+       rdfs:label "4限" ;
+       ic:イベントスケジュール型_種別 "時限"@ja ;
+       ic:イベントスケジュール型_開始時間 "13:45:00+09:00"^^xsd:time ;
+       ic:イベントスケジュール型_終了時間 "15:00:00+09:00"^^xsd:time .
 
-:015  a  ic:イベントスケジュール型 ;
-       rdfs:label "5"@en ;
-       ic:種別 "時限"@ja ;
-       ic:ic:開始時間 "15:15:00+09:00"^^xsd:time ;
-       ic:終了時間 "16:30:00+09:00"^^xsd:time .
+:5限  a  ic:イベントスケジュール型 ;
+       rdfs:label "5限" ;
+       ic:イベントスケジュール型_種別 "時限"@ja ;
+       ic:イベントスケジュール型_開始時間 "15:15:00+09:00"^^xsd:time ;
+       ic:イベントスケジュール型_終了時間 "16:30:00+09:00"^^xsd:time .
 
-:016  a  ic:イベントスケジュール型 ;
-       rdfs:label "6"@en ;
-       ic:種別 "時限"@ja ;
-       ic:ic:開始時間 "16:45:00+09:00"^^xsd:time ;
-       ic:終了時間 "18:00:00+09:00"^^xsd:time .
+:6限  a  ic:イベントスケジュール型 ;
+       rdfs:label "6限" ;
+       ic:イベントスケジュール型_種別 "時限"@ja ;
+       ic:イベントスケジュール型_開始時間 "16:45:00+09:00"^^xsd:time ;
+       ic:イベントスケジュール型_終了時間 "18:00:00+09:00"^^xsd:time .
