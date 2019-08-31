@@ -27,7 +27,7 @@ bp:授業型  a owl:Class ;
 bp:担当者
     a owl:ObjectProperty ;
     rdfs:label "担当者"@ja, "Teacher"@en ;
-    rdfs:comment "イベントの担当者を記述するためのプロパティ用語"@ja, "The code specifying a event's owner."@en ;
+    rdfs:comment "授業の担当者を記述するためのプロパティ用語"@ja, "The code specifying a class's owner."@en ;
     schema:domainIncludes ic:授業型 ;
     rdfs:range xsd:string .
 
