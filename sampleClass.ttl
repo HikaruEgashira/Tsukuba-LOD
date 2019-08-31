@@ -1,0 +1,34 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix ic: <http://imi.go.jp/ns/core/rdf#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ud: <tsukuba.ttl> .
+
+_:1 a ud:授業型 ;
+    ic:ID型 "GB13312,GB13322" ;
+    ic:名称 "情報特別演習I,II"@ja ;
+    rdfs:label "情報特別演習I,II"@ja ;
+    ic:名称 "Special Exercise in Information Science I,II"@en ;
+    rdfs:label "Special Exercise in Information Science I,II"@en ;
+    ic:開催場所 "";
+    ic:説明 """学生が興味や能力に応じて自主的に演習テーマを設定して，それに適したアドバイザ教員を決定して打ち合わせを行いながら演習を実施する．どのようなテーマを選択したら良いか分からない学生には，テーマの決定について教員が相談にのりアドバイスを行う．最後に演習結果を発表する公開発表会を行いレポートを提出する．企画力，実行力，表現力，プレゼンテーション能力を養うことを目的とする．""";
+    ud:担当者 "海野，庄野，山田 他" ;
+    ud:期間 "通年" ;
+    ud:曜日 "" ;
+    ud:時限 "".
+
+_:2 a ud:授業型 ;
+    ic:ID型 "1101602" ;
+    ic:名称 "フレッシュマン・セミナー"@ja ;
+    rdfs:label "フレッシュマン・セミナー"@ja ;
+    ic:名称 "Freshmen Seminar"@en ;
+    rdfs:label "Freshmen Seminar"@en ;
+    ic:開催場所 "1B302,1H101";
+    ic:説明 "大学生活について知識と理解を深め、学問研究への動機づけを高める。とくに人文学類における各主専攻分野の学習と研究について理解を促すとともに、大学におけるコミュニケーションの方法等について基本的な指導を行う。" ;
+    ud:担当者 "宮腰 幸一" ;
+    ud:期間 "春AB" ;
+    ud:曜日 "金" ;
+    ud:時限 "2".
