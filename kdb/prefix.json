@@ -1,0 +1,6 @@
+{
+    "base": "<https: //lod.egahika.ml/kdb#",
+    "rdfs": "http: //www.w3.org/2000/01/rdf-schema#",
+    "cc": "http: //creativecommons.org/ns#",
+    "ic": "http: //imi.go.jp/ns/core/rdf#"
+}
