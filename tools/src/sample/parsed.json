@@ -1,0 +1,20 @@
+[
+    {
+        "lectureID": "GB41911",
+        "name": "知識処理概論",
+        "module": "春A",
+        "period": 4,
+        "day": "火",
+        "room": "3A306",
+        "instructor": "狩野 均"
+    },
+    {
+        "lectureID": "GB41911",
+        "name": "知識処理概論",
+        "module": "春B",
+        "period": 4,
+        "day": "火",
+        "room": "3A306",
+        "instructor": "狩野 均"
+    }
+]

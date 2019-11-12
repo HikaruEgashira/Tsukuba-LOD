@@ -1,0 +1,17 @@
+{
+  "name": "tools",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "dev": "jest --watch",
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "twinte-parser": "^1.1.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
