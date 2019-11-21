@@ -5953,6 +5953,11 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   resolved "https://registry.npm.taobao.org/source-map/download/source-map-0.6.1.tgz?cache=0&sync_timestamp=1567937985360&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsource-map%2Fdownload%2Fsource-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha1-dHIq8y6WFOnCh6jQu95IteLxomM=
 
+sparql-http-client@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/sparql-http-client/-/sparql-http-client-1.1.1.tgz#daf71ad9f80995ee9dbe44a88dd1580b754a908f"
+  integrity sha512-273ev027SGg00wXjg8pNnyRtv2wOtWwhvUSvDKpXkjoQYBPrG9AgCxsSUZmw/HPO2VI/yu/Qut/XtDxJ8sQ6Fg==
+
 spdx-correct@^3.0.0:
   version "3.1.0"
   resolved "https://registry.npm.taobao.org/spdx-correct/download/spdx-correct-3.1.0.tgz#fb83e504445268f154b074e218c87c003cd31df4"
