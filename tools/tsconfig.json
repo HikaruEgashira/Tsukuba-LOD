@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "lib": [],
+        "baseUrl": "./src/",
+        "types": ["@types/node"]
+    }
+}
