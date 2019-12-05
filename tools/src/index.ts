@@ -55,7 +55,11 @@ function make(lecture: ParsedLecture, id: number): ttl {
   const array = [`_:${id} a ud:授業型`];
   let i = 0;
   for (let k in lecture) {
-    array.push(`${prefixs[i]} "${lecture[k]}"`);
+    if (typeof lecture[k] === "string") {
+      array.push(`${prefixs[i]} "${lecture[k].split("\n").join()}"`);
+    } else {
+      array.push(`${prefixs[i]} "${lecture[k]}"`);
+    }
     if (prefixs[i] === "ic:名称") {
       array.push(`rdfs:label "${lecture[k]}"`);
     }
