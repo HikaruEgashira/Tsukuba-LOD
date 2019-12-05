@@ -6339,10 +6339,10 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
 
-twinte-parser@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/twinte-parser/-/twinte-parser-1.1.0.tgz#0290f5700904302a9ec0231a0c11f01a99782cba"
-  integrity sha512-Bk+wl0p+nYyJjRI/15LrvcW5a+zxtTG5K9/Fc0oxJWLmAhqYP7uwzICqeV6SKI91kn11D1KHFRPoCJo3L+zylw==
+twinte-parser@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/twinte-parser/-/twinte-parser-1.2.2.tgz#60e34edb6e70d0e179d43e85307ac98b38339d09"
+  integrity sha512-aOgUB+FtIWVgbzww4GdIhrwy3VKpCTtTmhjhzyIqs1IKJSg9LihOKAMEPGpwiPmGwcVPvLmuTsUlp1YDyAdFoQ==
   dependencies:
     axios "^0.19.0"
     cli-progress "^2.1.1"
