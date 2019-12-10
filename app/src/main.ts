@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import App from './App.vue'
-import './registerServiceWorker'
-import store from './store'
+import App from './Infrastructure/App.vue'
+import './Infrastructure/registerServiceWorker'
+import store from './Infrastructure/store'
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
 

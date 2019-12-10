@@ -9,14 +9,19 @@
   "dependencies": {
     "buefy": "^0.8.0",
     "buefy-helper-json": "^1.0.3",
+    "isomorphic-fetch": "^2.2.1",
     "register-service-worker": "^1.6.2",
     "sparql-http-client": "^1.1.1",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.3.0",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "whatwg-url": "^7.1.0"
   },
   "devDependencies": {
+    "@types/isomorphic-fetch": "^0.0.35",
+    "@types/sparql-http-client": "^1.1.1",
+    "@types/whatwg-url": "^6.4.0",
     "@vue/cli-plugin-pwa": "^4.0.0",
     "@vue/cli-plugin-typescript": "^4.0.0",
     "@vue/cli-plugin-vuex": "^4.0.0",
