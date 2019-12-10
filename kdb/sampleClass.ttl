@@ -5,7 +5,7 @@
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix ic: <http://imi.go.jp/ns/core/rdf#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ud: <tsukuba.ttl> .
+@prefix ud: <http://localhost:3030/univ#> .
 
 _:1 a ud:授業型 ;
     ic:ID型 "GB13312,GB13322" ;
