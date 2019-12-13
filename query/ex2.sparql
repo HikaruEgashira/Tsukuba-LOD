@@ -1,0 +1,115 @@
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema>
+prefix cc: <http://creativecommons.org/ns#>
+prefix ic: <http://imi.go.jp/ns/core/rdf#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix ud: <http://localhost:3030/univ#>
+
+SELECT ?subject ?predicate ?object
+WHERE {
+  ?subject ic:ID型 ?oid. FILTER( contains(str(?oid),'11514') ) .
+  ?subject ?predicate ?object
+}
+LIMIT 100
+
+# {
+#   "head": {
+#     "vars": [ "subject" , "predicate" , "object" ]
+#   } ,
+#   "results": {
+#     "bindings": [
+#       {
+#         "subject": { "type": "bnode" , "value": "b0" } ,
+#         "predicate": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+#         "object": { "type": "uri" , "value": "http://localhost:3030/univ#授業型" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b0" } ,
+#         "predicate": { "type": "uri" , "value": "http://imi.go.jp/ns/core/rdf#ID型" } ,
+#         "object": { "type": "literal" , "value": "GB11514" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b0" } ,
+#         "predicate": { "type": "uri" , "value": "http://imi.go.jp/ns/core/rdf#名称" } ,
+#         "object": { "type": "literal" , "value": "シミュレーション物理" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b0" } ,
+#         "predicate": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+#         "object": { "type": "literal" , "value": "シミュレーション物理" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b0" } ,
+#         "predicate": { "type": "uri" , "value": "http://localhost:3030/univ#担当者" } ,
+#         "object": { "type": "literal" , "value": "狩野 均" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b0" } ,
+#         "predicate": { "type": "uri" , "value": "http://localhost:3030/univ#期間" } ,
+#         "object": { "type": "literal" , "value": "秋C" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b0" } ,
+#         "predicate": { "type": "uri" , "value": "http://localhost:3030/univ#曜日" } ,
+#         "object": { "type": "literal" , "value": "木" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b0" } ,
+#         "predicate": { "type": "uri" , "value": "http://localhost:3030/univ#時限" } ,
+#         "object": { "type": "literal" , "value": "1" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b0" } ,
+#         "predicate": { "type": "uri" , "value": "http://imi.go.jp/ns/core/rdf#開催場所" } ,
+#         "object": { "type": "literal" , "value": "3A403" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b1" } ,
+#         "predicate": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+#         "object": { "type": "uri" , "value": "http://localhost:3030/univ#授業型" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b1" } ,
+#         "predicate": { "type": "uri" , "value": "http://imi.go.jp/ns/core/rdf#ID型" } ,
+#         "object": { "type": "literal" , "value": "GB11514" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b1" } ,
+#         "predicate": { "type": "uri" , "value": "http://imi.go.jp/ns/core/rdf#名称" } ,
+#         "object": { "type": "literal" , "value": "シミュレーション物理" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b1" } ,
+#         "predicate": { "type": "uri" , "value": "http://www.w3.org/2000/01/rdf-schema#label" } ,
+#         "object": { "type": "literal" , "value": "シミュレーション物理" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b1" } ,
+#         "predicate": { "type": "uri" , "value": "http://localhost:3030/univ#担当者" } ,
+#         "object": { "type": "literal" , "value": "狩野 均" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b1" } ,
+#         "predicate": { "type": "uri" , "value": "http://localhost:3030/univ#期間" } ,
+#         "object": { "type": "literal" , "value": "秋C" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b1" } ,
+#         "predicate": { "type": "uri" , "value": "http://localhost:3030/univ#曜日" } ,
+#         "object": { "type": "literal" , "value": "木" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b1" } ,
+#         "predicate": { "type": "uri" , "value": "http://localhost:3030/univ#時限" } ,
+#         "object": { "type": "literal" , "value": "2" }
+#       } ,
+#       {
+#         "subject": { "type": "bnode" , "value": "b1" } ,
+#         "predicate": { "type": "uri" , "value": "http://imi.go.jp/ns/core/rdf#開催場所" } ,
+#         "object": { "type": "literal" , "value": "3A403" }
+#       }
+#     ]
+#   }
+# }
