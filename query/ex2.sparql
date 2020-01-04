@@ -9,7 +9,7 @@ prefix ud: <http://localhost:3030/univ#>
 
 SELECT ?subject ?predicate ?object
 WHERE {
-  ?subject ic:ID型 ?oid. FILTER( contains(str(?oid),'11514') ) .
+  ?subject ic:ID型 ?oid. FILTER( contains(str(?oid),'GB') ) .
   ?subject ?predicate ?object
 }
 LIMIT 100

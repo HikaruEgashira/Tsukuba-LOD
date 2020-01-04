@@ -1,6 +1,6 @@
-import { downloadKDB, parseKDB, Lecture } from "twinte-parser";
-import { ParsedLecture, ttl } from "./type";
-import * as fs from "fs";
+import { downloadKDB, parseKDB, Lecture } from 'twinte-parser';
+import { ParsedLecture, ttl } from './type';
+import * as fs from 'fs';
 
 /**
  * kdb.json
@@ -8,7 +8,7 @@ import * as fs from "fs";
 async function fetchJson(): Promise<Lecture[]> {
   const csv = await downloadKDB(2019);
   const json = parseKDB(csv);
-  fs.writeFileSync("kdb.json", JSON.stringify(json));
+  fs.writeFileSync('kdb.json', JSON.stringify(json));
   return json;
 }
 
@@ -44,28 +44,28 @@ function divide(obj: Lecture): ParsedLecture[] {
  */
 function make(lecture: ParsedLecture, id: number): ttl {
   const prefixs = [
-    "ic:ID型",
-    "ic:名称",
-    "ud:担当者",
-    "ud:期間",
-    "ud:曜日",
-    "ud:時限",
-    "ic:開催場所"
+    'ic:ID型',
+    'ic:名称',
+    'ud:担当者',
+    'ud:期間',
+    'ud:曜日',
+    'ud:時限',
+    'ic:開催場所'
   ];
   const array = [`_:${id} a ud:授業型`];
   let i = 0;
   for (let k in lecture) {
-    if (typeof lecture[k] === "string") {
-      array.push(`${prefixs[i]} "${lecture[k].split("\n").join()}"`);
+    if (typeof lecture[k] === 'string') {
+      array.push(`${prefixs[i]} "${lecture[k].split('\n').join()}"`);
     } else {
       array.push(`${prefixs[i]} "${lecture[k]}"`);
     }
-    if (prefixs[i] === "ic:名称") {
+    if (prefixs[i] === 'ic:名称') {
       array.push(`rdfs:label "${lecture[k]}"`);
     }
     i++;
   }
-  return array.join(" ;\n\t") + " .";
+  return array.join(' ;\n\t') + ' .';
 }
 
 /**
@@ -77,7 +77,7 @@ function make(lecture: ParsedLecture, id: number): ttl {
 async function parseToLod(jsonObject: Lecture[]) {
   const parsedArray = await Promise.all(
     jsonObject
-      .filter(o => o.lectureCode.split("")[0] !== "0")
+      .filter(o => o.lectureCode.split('')[0] !== '0')
       .reduce((prev, obj) => {
         return [...prev, ...divide(obj)];
       }, [])
@@ -87,7 +87,7 @@ async function parseToLod(jsonObject: Lecture[]) {
       return make(parsed, i);
     })
   );
-  return lod.join("\n");
+  return lod.join('\n');
 }
 
 export { fetchJson, parseToLod };
