@@ -1,2 +1,3 @@
-import getLodData from "./getLodData";
-export { getLodData };
+import getLodData from './getLodData';
+import { parse } from './parce';
+export { getLodData, parse };

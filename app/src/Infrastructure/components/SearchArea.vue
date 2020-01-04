@@ -11,6 +11,21 @@
           >
         </p>
       </b-field>
+      <b-field label="検索の種類" label-position="on-border">
+        <b-select v-model="type">
+          <option v-for="option in types" :value="option" :key="option">
+            {{ option }}
+          </option>
+        </b-select>
+      </b-field>
+      <b-field label="Endpoint" label-position="on-border">
+        <b-input readonly v-model="endpoint"></b-input>
+      </b-field>
+      <b-field label="Query" label-position="on-border">
+        <b-input readonly v-model="query" type="textarea"></b-input>
+      </b-field>
+
+      <b-table striped :data="data" :columns="columns"></b-table>
     </section>
     <!-- → 検索ボックス -->
 
@@ -24,16 +39,49 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import { getLodData } from "../../InterfaceAdapter";
+import { Component, Vue } from 'vue-property-decorator';
+import { getLodData, parse } from '../../InterfaceAdapter';
+import { SparqlResponse, Lecture } from '../../Domains/sparqlResponse';
+import { ParcedSparql } from '../../Domains/spqrqlParcer';
+
+interface table {
+  lecture_code: string;
+  lecture_name: string;
+  room: string;
+  instructor: string;
+}
 
 @Component
 export default class Index extends Vue {
-  name = "";
-  result: any = null;
-  async submit() {
-    const endpoint = `http://localhost:3030/kdb/sparql`;
-    const query = `prefix owl: <http://www.w3.org/2002/07/owl#>
+  name = '';
+  type = '名称';
+
+  types = ['名称', 'ID型', '教室'];
+
+  parcedRes: string = '';
+  data: table[] = [];
+
+  columns = [
+    {
+      field: 'lecture_code',
+      label: '授業番号'
+    },
+    {
+      field: 'lecture_name',
+      label: '授業名'
+    },
+    {
+      field: 'instructor',
+      label: '教師'
+    },
+    {
+      field: 'room',
+      label: '教室'
+    }
+  ];
+
+  endpoint = `http://localhost:3030/kdb/sparql`;
+  prefix = `prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema>
@@ -41,22 +89,32 @@ prefix cc: <http://creativecommons.org/ns#>
 prefix ic: <http://imi.go.jp/ns/core/rdf#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix ud: <http://localhost:3030/univ#>
-SELECT ?subject ?predicate ?object
-
-WHERE {
-  ?subject ic:名称 ?oid. FILTER( contains(str(?oid),'${this.name}') ) .
-  ?subject ic:名称 ?object
-}
-LIMIT 100
 `;
-    console.log(query);
-    const a = await getLodData(endpoint, query);
-    this.result = JSON.parse(a);
-    const subjects = this.result.results.bindings.map((b: any) => {
-      if (b.object) return b.object.value;
-      return null;
+  get query() {
+    return `SELECT ?subject ?predicate ?object
+WHERE {
+  ?subject ic:${this.type} ?oid. FILTER( contains(str(?oid),'${this.name}') ) .
+  ?subject ?predicate ?object
+}
+LIMIT 100`;
+  }
+
+  async submit() {
+    const query = `${this.prefix}${this.query}`;
+    const result = await getLodData(this.endpoint, query);
+    const parsed = await parse(result);
+
+    this.parcedRes = JSON.stringify(parsed);
+    this.data = parsed.map(v => {
+      return {
+        lecture_code: v.lecture_code,
+        lecture_name: v.lecture_name,
+        instructor: v.instructor.join(','),
+        room: v.room.join(',')
+      };
     });
-    alert(subjects);
+    // 表示用にデータを整形
+    this.name = '';
   }
 }
 </script>
