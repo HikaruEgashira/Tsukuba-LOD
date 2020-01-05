@@ -4,6 +4,7 @@ import './Infrastructure/registerServiceWorker';
 import store from './Infrastructure/store';
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
+import './registerServiceWorker'
 
 Vue.use(Buefy);
 
