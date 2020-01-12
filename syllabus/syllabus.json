@@ -1,0 +1,60 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "フレッシュマン・セミナー",
+      "url": "http://www.coins.tsukuba.ac.jp/syllabus/1118102_1118202_1118302_1118402.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "知能と情報科学",
+      "url": "http://www.coins.tsukuba.ac.jp/syllabus/GA12101.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "計算と情報科学",
+      "url": "http://www.coins.tsukuba.ac.jp/syllabus/GA12201.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "システムと情報科学",
+      "url": "http://www.coins.tsukuba.ac.jp/syllabus/GA12301.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "情報数学A",
+      "url": "http://www.coins.tsukuba.ac.jp/syllabus/GA15111_GA15121.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "線形代数A",
+      "url": "http://www.coins.tsukuba.ac.jp/syllabus/GA15211_GA15221.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "微分積分A",
+      "url": "http://www.coins.tsukuba.ac.jp/syllabus/GA15311_GA15321.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "プログラミング入門",
+      "url": "http://www.coins.tsukuba.ac.jp/syllabus/GA18112.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "線形代数II",
+      "url": "http://www.coins.tsukuba.ac.jp/syllabus/GB10214.html"
+    }
+  ]
+}
