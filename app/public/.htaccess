@@ -1,0 +1,1 @@
+AddType text/n3;charset=utf-8 .n3 AddType text/turtle;charset=utf-8 .ttl

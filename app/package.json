@@ -1,7 +1,7 @@
 {
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build --skip-plugins pwa"
   },
   "dependencies": {
     "buefy": "^0.8.0",
@@ -17,6 +17,7 @@
     "whatwg-url": "^7.1.0"
   },
   "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.1.0",
     "@types/isomorphic-fetch": "^0.0.35",
     "@types/lodash.union": "^4.6.6",
     "@types/sparql-http-client": "^1.1.1",
@@ -25,17 +26,8 @@
     "@vue/cli-plugin-typescript": "^4.0.0",
     "@vue/cli-plugin-vuex": "^4.0.0",
     "@vue/cli-service": "^4.0.0",
-    "typescript": "~3.5.3",
+    "typescript": "^3.5.3",
     "vue-cli-plugin-buefy": "^0.3.7",
     "vue-template-compiler": "^2.6.10"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+  }
 }
